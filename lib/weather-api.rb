@@ -20,4 +20,5 @@ module Weather
   end
 
   autoload :Version, 'weather-api/version'
+  autoload :Units,   'weather-api/units'
 end
