@@ -15,7 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Weather::Version.to_s
 
-  gem.add_dependency "httparty", "~> 0.8.1"
   gem.add_dependency "nokogiri", "~> 1.5.2"
   gem.add_dependency "chronic",  "~> 0.6.7"
 
