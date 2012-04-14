@@ -7,7 +7,7 @@ describe Weather::Utils do
   end
 
   it 'should return nil if passed nothing' do
-    time = Weather::Utils.parse_time('this is not a time')
+    time = Weather::Utils.parse_time('')
     time.should == nil
   end
 end

@@ -15,7 +15,7 @@ module Weather
     #
     # Returns a Weather::Response object containing forecast
     def lookup(woeid, units = 'f')
-      url = ENDPOINT + "?w=#{CGI.escape(woeid.to_s)}&u=#{CGI.escape(units)}"
+      url = ENDPOINT + "?w=#{CGI.escape(woeid.to_s)}&u=#{CGI.escape(units.downcase)}"
 
       begin
         response = Net::HTTP.get_response(URI.parse(url)).body.to_s

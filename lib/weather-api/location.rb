@@ -9,7 +9,7 @@ module Weather
     # name of the region, such as a state or province
     attr_reader :region
 
-    def initialize (payload)
+    def initialize(payload)
       @city    = payload['city']
       @country = payload['country']
       @region  = payload['region']

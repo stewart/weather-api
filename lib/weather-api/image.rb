@@ -15,7 +15,7 @@ module Weather
     # the title of the image
     attr_reader :title
 
-    def initialize (payload)
+    def initialize(payload)
       @height = payload.xpath('height').first.content.to_i
       @width  = payload.xpath('width').first.content.to_i
       @url    = payload.xpath('url').first.content

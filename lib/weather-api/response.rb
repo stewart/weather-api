@@ -42,9 +42,6 @@ module Weather
     # the longitude for the requested location
     attr_reader :longitude
 
-    # a link to the Yahoo! Weather page for the requested location
-    attr_reader :page_url
-
     # the location string initially requested of the service.
     attr_reader :request_location
 
@@ -81,7 +78,6 @@ module Weather
 
       @latitude    = item.xpath('geo:lat').first.content.to_f
       @longitude   = item.xpath('geo:long').first.content.to_f
-      @page_url    = item.xpath('link').first.content
       @title       = item.xpath('title').first.content
       @description = item.xpath('description').first.content
     end
