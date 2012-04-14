@@ -1,11 +1,14 @@
+require 'net/http'
+require 'nokogiri'
+
 module Weather
   class << self
 
     # Alias for Weather::API.new
     #
     # Returns a Weather::API object
-    def new(options)
-      Weather::API.new(options)
+    def new
+      Weather::API.new
     end
 
     # Delegate to Weather::API
@@ -19,7 +22,16 @@ module Weather
     end
   end
 
-  autoload :Units,   'weather-api/units'
-  autoload :Utils,   'weather-api/utils'
-  autoload :Version, 'weather-api/version'
+  autoload :API,        'weather-api/api'
+  autoload :Astronomy,  'weather-api/astronomy'
+  autoload :Atmosphere, 'weather-api/atmosphere'
+  autoload :Condition,  'weather-api/condition'
+  autoload :Forecast,   'weather-api/forecast'
+  autoload :Image,      'weather-api/image'
+  autoload :Location,   'weather-api/location'
+  autoload :Response,   'weather-api/response'
+  autoload :Units,      'weather-api/units'
+  autoload :Utils,      'weather-api/utils'
+  autoload :Version,    'weather-api/version'
+  autoload :Wind,       'weather-api/wind'
 end
