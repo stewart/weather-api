@@ -19,7 +19,7 @@ module Weather
     #
     # Returns an int
     def self.patch
-      0
+      1
     end
 
     # The current pre version number
