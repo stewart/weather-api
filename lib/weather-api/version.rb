@@ -5,7 +5,7 @@ module Weather
     #
     # Returns an int
     def self.major
-      0
+      1
     end
 
     # The current minor version number
@@ -19,7 +19,7 @@ module Weather
     #
     # Returns an int
     def self.patch
-      1
+      0
     end
 
     # The current pre version number
