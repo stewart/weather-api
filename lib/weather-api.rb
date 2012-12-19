@@ -1,5 +1,6 @@
 require 'net/http'
 require 'nokogiri'
+require 'cgi'
 
 module Weather
   class << self

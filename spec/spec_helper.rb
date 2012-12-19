@@ -1,6 +1,3 @@
-require "simplecov"
-SimpleCov.start
-
 require "weather-api"
 
 require "rspec"
