@@ -7,8 +7,8 @@ module Weather
     attr_reader :sunset
 
     def initialize(payload)
-      @sunrise = Weather::Utils.parse_time payload['sunrise']
-      @sunset  = Weather::Utils.parse_time payload['sunset']
+      @sunrise = Utils.parse_time payload['sunrise']
+      @sunset  = Utils.parse_time payload['sunset']
     end
   end
 end

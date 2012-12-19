@@ -43,7 +43,7 @@ module Weather
       doc = Nokogiri::XML.parse(response)
 
       # create response object
-      Weather::Response.new(woeid, url, doc)
+      Response.new(woeid, url, doc)
     end
   end
 end

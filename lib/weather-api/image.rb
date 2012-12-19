@@ -16,11 +16,11 @@ module Weather
     attr_reader :title
 
     def initialize(payload)
-      @height = payload.xpath('height').first.content.to_i
-      @width  = payload.xpath('width').first.content.to_i
-      @url    = payload.xpath('url').first.content
-      @link   = payload.xpath('link').first.content
-      @title  = payload.xpath('title').first.content
+      @height = payload.at_xpath('height').content.to_i
+      @width  = payload.at_xpath('width').content.to_i
+      @url    = payload.at_xpath('url').content
+      @link   = payload.at_xpath('link').content
+      @title  = payload.at_xpath('title').content
     end
   end
 end

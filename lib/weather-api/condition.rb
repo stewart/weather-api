@@ -14,7 +14,7 @@ module Weather
 
     def initialize(payload)
       @code = payload['code'].to_i
-      @date = Weather::Utils.parse_time(payload['date'])
+      @date = Utils.parse_time(payload['date'])
       @temp = payload['temp'].to_i
       @text = payload['text']
     end

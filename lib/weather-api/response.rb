@@ -58,28 +58,28 @@ module Weather
       @request_url      = request_url
 
       # parse the xml element to get response data
-      root = doc.xpath('/rss/channel').first
+      root = doc.at_xpath('/rss/channel')
 
-      @astronomy  = Weather::Astronomy.new(root.xpath('yweather:astronomy').first)
-      @location   = Weather::Location.new(root.xpath('yweather:location').first)
-      @units      = Weather::Units.new(root.xpath('yweather:units').first)
-      @wind       = Weather::Wind.new(root.xpath('yweather:wind').first)
-      @atmosphere = Weather::Atmosphere.new(root.xpath('yweather:atmosphere').first)
-      @image      = Weather::Image.new(root.xpath('image').first)
+      @astronomy  = Astronomy.new(root.at_xpath('yweather:astronomy'))
+      @location   = Location.new(root.at_xpath('yweather:location'))
+      @units      = Units.new(root.at_xpath('yweather:units'))
+      @wind       = Wind.new(root.at_xpath('yweather:wind'))
+      @atmosphere = Atmosphere.new(root.at_xpath('yweather:atmosphere'))
+      @image      = Image.new(root.at_xpath('image'))
 
-      item = root.xpath('item').first
+      item = root.at_xpath('item')
       @forecasts = []
 
-      @condition  = Weather::Condition.new(item.xpath('yweather:condition').first)
+      @condition  = Condition.new(item.at_xpath('yweather:condition'))
 
       item.xpath('yweather:forecast').each do |forecast|
-        @forecasts << Weather::Forecast.new(forecast)
+        @forecasts << Forecast.new(forecast)
       end
 
-      @latitude    = item.xpath('geo:lat').first.content.to_f
-      @longitude   = item.xpath('geo:long').first.content.to_f
-      @title       = item.xpath('title').first.content
-      @description = item.xpath('description').first.content
+      @latitude    = item.at_xpath('geo:lat').content.to_f
+      @longitude   = item.at_xpath('geo:long').content.to_f
+      @title       = item.at_xpath('title').content
+      @description = item.at_xpath('description').content
     end
   end
 end
