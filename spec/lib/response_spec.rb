@@ -3,11 +3,9 @@ require 'spec_helper'
 describe Weather::Response do
   use_vcr_cassette
 
-  let(:client) { Weather::API.new }
-  let(:response) { client.lookup(9848) }
+  let(:response) { Weather.lookup(9848) }
 
   subject { response }
-
 
   it 'should contain a Weather::Astronomy object' do
     expect(subject.astronomy).to be_a Weather::Astronomy

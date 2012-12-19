@@ -3,8 +3,7 @@ require 'spec_helper'
 describe Weather::Forecast do
   use_vcr_cassette
 
-  let(:client) { Weather::API.new }
-  let(:response) { client.lookup(9848) }
+  let(:response) { Weather.lookup(9848) }
 
   subject { response.forecasts[0] }
 
