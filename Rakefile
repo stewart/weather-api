@@ -8,5 +8,5 @@ RSpec::Core::RakeTask.new(:spec)
 
 desc 'Open an irb session preloaded with this library'
 task :console do
-  sh 'pry -Ilib -rweather-api'
+  sh 'irb -Ilib -rweather-api'
 end
