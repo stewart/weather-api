@@ -65,7 +65,7 @@ module Weather
       @units      = Units.new(root.at_xpath('yweather:units'))
       @wind       = Wind.new(root.at_xpath('yweather:wind'))
       @atmosphere = Atmosphere.new(root.at_xpath('yweather:atmosphere'))
-      @image      = Image.new(root.at_xpath('image'))
+      @image      = Image.new(Nokogiri::XML.parse(root.at_css('item description').text))
 
       item = root.at_xpath('item')
       @forecasts = []

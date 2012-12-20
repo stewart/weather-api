@@ -7,14 +7,7 @@ describe Weather::Image do
 
   subject { response.image }
 
-  it 'should contain integers for image height and width' do
-    expect(subject.height).to be_a Integer
-    expect(subject.width).to be_a Integer
-  end
-
-  it 'should contain strings for the image url, link, and title' do
+  it 'should contain a string for the image url' do
     expect(subject.url).to be_a String
-    expect(subject.link).to be_a String
-    expect(subject.title).to be_a String
   end
 end
