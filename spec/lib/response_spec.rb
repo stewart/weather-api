@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Weather::Response do
   use_vcr_cassette
 
-  let(:response) { Weather.lookup(9848) }
+  let(:response) { Weather.lookup 9848 }
 
   subject { response }
 
@@ -53,7 +53,7 @@ describe Weather::Response do
   end
 
   it 'should contain latitude and longitude in floats' do
-    expect(subject.latitude).to  be_a Float
+    expect(subject.latitude).to be_a Float
     expect(subject.longitude).to be_a Float
   end
 end

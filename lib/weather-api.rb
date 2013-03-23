@@ -17,7 +17,7 @@ require 'weather-api/wind'
 module Weather
   class << self
     # Yahoo! Weather info endpoint
-    ENDPOINT = "http://weather.yahooapis.com/forecastrss"
+    ROOT = "http://weather.yahooapis.com/forecastrss"
 
     # Public: Looks up current weather information using WOEID
     #
@@ -30,20 +30,21 @@ module Weather
     #         or Celsius. Defaults to Farenheit
     #
     # Returns a Weather::Response object containing forecast
-    def lookup(woeid, units = 'f')
-      url = ENDPOINT + "?w=#{CGI.escape(woeid.to_s)}&u=#{CGI.escape(units.downcase)}"
+    def lookup woeid, units = 'f'
+      url = "#{ROOT}?w=#{CGI.escape woeid.to_s}&u=#{CGI.escape units.downcase}"
+      doc = get_response url
+      Response.new woeid, url, doc
+    end
 
+    private
+    def get_response url
       begin
-        response = Net::HTTP.get_response(URI.parse(url)).body.to_s
+        response = Net::HTTP.get_response(URI.parse url).body.to_s
       rescue => e
-        raise RuntimeError.new("Failed to get weather [woeid=#{woeid}, url=#{url}, e=#{e}].")
+        raise "Failed to get weather [woeid=#{woeid}, url=#{url}, e=#{e}]."
       end
 
-      # parse returned XML
-      doc = Nokogiri::XML.parse(response)
-
-      # create response object
-      Response.new(woeid, url, doc)
+      Nokogiri::XML.parse response
     end
   end
 end

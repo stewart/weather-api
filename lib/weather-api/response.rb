@@ -52,25 +52,25 @@ module Weather
     # the title of the weather information for the requested location
     attr_reader :title
 
-    def initialize(request_location, request_url, doc)
+    def initialize request_location, request_url, doc
       # save the request params
       @request_location = request_location
       @request_url      = request_url
 
       # parse the xml element to get response data
-      root = doc.at_xpath('/rss/channel')
+      root = doc.at_xpath '/rss/channel'
 
-      @astronomy  = Astronomy.new(root.at_xpath('yweather:astronomy'))
-      @location   = Location.new(root.at_xpath('yweather:location'))
-      @units      = Units.new(root.at_xpath('yweather:units'))
-      @wind       = Wind.new(root.at_xpath('yweather:wind'))
-      @atmosphere = Atmosphere.new(root.at_xpath('yweather:atmosphere'))
-      @image      = Image.new(Nokogiri::XML.parse(root.at_css('item description').text))
+      @astronomy  = Astronomy.new root.at_xpath 'yweather:astronomy'
+      @location   = Location.new root.at_xpath 'yweather:location'
+      @units      = Units.new root.at_xpath 'yweather:units'
+      @wind       = Wind.new root.at_xpath 'yweather:wind'
+      @atmosphere = Atmosphere.new root.at_xpath 'yweather:atmosphere'
+      @image      = Image.new Nokogiri::XML.parse root.at_css('item description').text
 
-      item = root.at_xpath('item')
+      item = root.at_xpath 'item'
       @forecasts = []
 
-      @condition  = Condition.new(item.at_xpath('yweather:condition'))
+      @condition  = Condition.new item.at_xpath 'yweather:condition'
 
       item.xpath('yweather:forecast').each do |forecast|
         @forecasts << Forecast.new(forecast)

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Weather::Condition do
   use_vcr_cassette
 
-  let(:response) { Weather.lookup(9848) }
+  let(:response) { Weather.lookup 9848 }
 
   subject { response.condition }
 

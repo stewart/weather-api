@@ -8,7 +8,8 @@ A Ruby wrapper for the Yahoo! Weather XML RSS feed.
 
 ## Description
 
-Weather-API provides an object-oriented interface to the Yahoo! Weather XML RSS feed service.
+Weather-API provides an object-oriented interface to the Yahoo! Weather XML RSS
+feed service.
 
 Details on the service can be found [here](http://developer.yahoo.com/weather).
 

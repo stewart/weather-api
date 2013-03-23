@@ -12,9 +12,9 @@ module Weather
     # the brief prose text description of the weather conditions of the location.
     attr_reader :text
 
-    def initialize(payload)
+    def initialize payload
       @code = payload['code'].to_i
-      @date = Utils.parse_time(payload['date'])
+      @date = Utils.parse_time payload['date']
       @temp = payload['temp'].to_i
       @text = payload['text']
     end
