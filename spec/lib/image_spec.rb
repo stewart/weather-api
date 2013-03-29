@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Weather::Image do
-  use_vcr_cassette
-
+describe Weather::Image, :vcr do
   let(:response) { Weather.lookup 9848 }
 
   subject { response.image }

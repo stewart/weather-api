@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Weather::Forecast do
-  use_vcr_cassette
-
+describe Weather::Forecast, :vcr do
   let(:response) { Weather.lookup 9848 }
 
   subject { response.forecasts[0] }

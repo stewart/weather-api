@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Weather::Response do
-  use_vcr_cassette
-
+describe Weather::Response, :vcr do
   let(:response) { Weather.lookup 9848 }
 
   subject { response }
@@ -41,7 +39,7 @@ describe Weather::Response do
 
   it 'should contain the WOEID of the request location and the requested URL' do
     expect(subject.request_location).to eq 9848
-    expect(subject.request_url).to eq "http://weather.yahooapis.com/forecastrss?w=9848&u=f"
+    expect(subject.request_url).to eq "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D9848%20and%20u%3D'f'&format=json"
   end
 
   it 'should contain a HTML description summarizing weather conditions' do

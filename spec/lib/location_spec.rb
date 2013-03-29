@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Weather::Location do
-  use_vcr_cassette
-
+describe Weather::Location, :vcr do
   it 'should contain city, country, and region as strings' do
     response = Weather.lookup 9848
 

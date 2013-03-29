@@ -8,9 +8,7 @@ describe Weather::Units do
     end
   end
 
-  describe 'defaults' do
-    use_vcr_cassette
-
+  describe 'defaults', :vcr do
     it 'should default to imperial units' do
       response = Weather.lookup 9848
 

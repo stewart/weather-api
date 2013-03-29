@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=2490383%20and%20u='f'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - query.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - engine6.yql.ne1.yahoo.com
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=3600
+      Content-Type:
+      - application/json;charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 29 Mar 2013 07:15:47 GMT
+      Server:
+      - YTS/1.20.13
+      Age:
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2013-03-29T07:15:47Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
+        Weather - Seattle, WA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html","description":"Yahoo!
+        Weather for Seattle, WA","language":"en-us","lastBuildDate":"Thu, 28 Mar 2013
+        10:52 pm PDT","ttl":"60","location":{"city":"Seattle","country":"United States","region":"WA"},"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"wind":{"chill":"53","direction":"0","speed":"0"},"atmosphere":{"humidity":"74","pressure":"30.14","rising":"1","visibility":"10"},"astronomy":{"sunrise":"6:54
+        am","sunset":"7:32 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Seattle, WA at 10:52 pm PDT","lat":"47.6","long":"-122.33","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html","pubDate":"Thu,
+        28 Mar 2013 10:52 pm PDT","condition":{"code":"27","date":"Thu, 28 Mar 2013
+        10:52 pm PDT","temp":"53","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/27.gif\"/><br
+        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 53 F<BR />\n<BR /><b>Forecast:</b><BR
+        />\nThu - Mostly Cloudy. High: 61 Low: 48<br />\nFri - AM Clouds/PM Sun. High:
+        65 Low: 47<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html\">Full
+        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"27","date":"28 Mar
+        2013","day":"Thu","high":"61","low":"48","text":"Mostly Cloudy"},{"code":"30","date":"29
+        Mar 2013","day":"Fri","high":"65","low":"47","text":"AM Clouds/PM Sun"}],"guid":{"isPermaLink":"false","content":"USWA0395_2013_03_29_7_00_PDT"}}}}}}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 07:15:47 GMT
+recorded_with: VCR 2.4.0

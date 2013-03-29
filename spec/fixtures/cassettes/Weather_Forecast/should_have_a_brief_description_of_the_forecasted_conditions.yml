@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=9848%20and%20u='f'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - query.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - engine1.yql.ne1.yahoo.com
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=3600
+      Content-Type:
+      - application/json;charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 29 Mar 2013 06:53:56 GMT
+      Server:
+      - YTS/1.20.13
+      Age:
+      - '1310'
+      Content-Length:
+      - '880'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2013-03-29T06:53:57Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
+        Weather - Victoria, CA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html","description":"Yahoo!
+        Weather for Victoria, CA","language":"en-us","lastBuildDate":"Thu, 28 Mar
+        2013 8:59 pm PDT","ttl":"60","location":{"city":"Victoria","country":"Canada","region":"BC"},"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"wind":{"chill":"46","direction":"230","speed":"5"},"atmosphere":{"humidity":"82","pressure":"30.11","rising":"1","visibility":""},"astronomy":{"sunrise":"6:59
+        am","sunset":"7:36 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Victoria, CA at 8:59 pm PDT","lat":"48.43","long":"-123.36","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html","pubDate":"Thu,
+        28 Mar 2013 8:59 pm PDT","condition":{"code":"29","date":"Thu, 28 Mar 2013
+        8:59 pm PDT","temp":"48","text":"Partly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/29.gif\"/><br
+        />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 48 F<BR />\n<BR /><b>Forecast:</b><BR
+        />\nThu - Clear. High: 55 Low: 43<br />\nFri - AM Clouds/PM Sun. High: 55
+        Low: 44<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html\">Full
+        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"31","date":"28 Mar
+        2013","day":"Thu","high":"55","low":"43","text":"Clear"},{"code":"30","date":"29
+        Mar 2013","day":"Fri","high":"55","low":"44","text":"AM Clouds/PM Sun"}],"guid":{"isPermaLink":"false","content":"CAXX0523_2013_03_29_7_00_PDT"}}}}}}'
+    http_version: 
+  recorded_at: Fri, 29 Mar 2013 07:15:46 GMT
+recorded_with: VCR 2.4.0
