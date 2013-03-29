@@ -13,10 +13,10 @@ module Weather
     attr_reader :text
 
     def initialize payload
-      @code = payload['code'].to_i
-      @date = Utils.parse_time payload['date']
-      @temp = payload['temp'].to_i
-      @text = payload['text']
+      @code = payload[:code].to_i
+      @date = Utils.parse_time payload[:date]
+      @temp = payload[:temp].to_i
+      @text = payload[:text]
     end
   end
 end

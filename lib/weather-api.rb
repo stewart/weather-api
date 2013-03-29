@@ -1,5 +1,6 @@
 require 'net/http'
-require 'nokogiri'
+require 'json'
+require 'map'
 require 'cgi'
 
 require 'weather-api/astronomy'
@@ -17,7 +18,7 @@ require 'weather-api/wind'
 module Weather
   class << self
     # Yahoo! Weather info endpoint
-    ROOT = "http://weather.yahooapis.com/forecastrss"
+    ROOT = "http://query.yahooapis.com/v1/public/yql"
 
     # Public: Looks up current weather information using WOEID
     #
@@ -31,7 +32,10 @@ module Weather
     #
     # Returns a Weather::Response object containing forecast
     def lookup woeid, units = 'f'
-      url = "#{ROOT}?w=#{CGI.escape woeid.to_s}&u=#{CGI.escape units.downcase}"
+      url = ROOT
+      url += "?q=select%20*%20from%20weather.forecast%20"
+      url += "where%20woeid%3D#{woeid}%20and%20u%3D'#{units}'&format=json"
+
       doc = get_response url
       Response.new woeid, url, doc
     end
@@ -41,10 +45,16 @@ module Weather
       begin
         response = Net::HTTP.get_response(URI.parse url).body.to_s
       rescue => e
-        raise "Failed to get weather [woeid=#{woeid}, url=#{url}, e=#{e}]."
+        raise "Failed to get weather [url=#{url}, e=#{e}]."
       end
 
-      Nokogiri::XML.parse response
+      response = Map.new(JSON.parse(response))[:query][:results][:channel]
+
+      if response.nil?
+        raise "Failed to get weather [url=#{url}]."
+      end
+
+      response
     end
   end
 end

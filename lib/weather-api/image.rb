@@ -4,7 +4,7 @@ module Weather
     attr_reader :url
 
     def initialize payload
-      @url = payload.at_css('img').attr("src")
+      @url = payload.scan(/src=\"(.*)\"/).flatten.first
     end
   end
 end

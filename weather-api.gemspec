@@ -16,11 +16,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Weather::Version.to_s
 
-  gem.add_dependency "nokogiri", "~> 1.5.6"
   gem.add_dependency "chronic",  "~> 0.9.1"
+  gem.add_dependency "map", "~> 6.3.0"
 
   gem.add_development_dependency "rspec",   "~> 2.12.0"
   gem.add_development_dependency "webmock", "~> 1.9.0"
   gem.add_development_dependency "rake",    "~> 10.0.3"
-  gem.add_development_dependency "vcr",     "~> 2.3.0"
+  gem.add_development_dependency "vcr",     "~> 2.4.0"
 end

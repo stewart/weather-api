@@ -57,29 +57,25 @@ module Weather
       @request_location = request_location
       @request_url      = request_url
 
-      # parse the xml element to get response data
-      root = doc.at_xpath '/rss/channel'
+      @astronomy  = Astronomy.new doc[:astronomy]
+      @location   = Location.new doc[:location]
+      @units      = Units.new doc[:units]
+      @wind       = Wind.new doc[:wind]
+      @atmosphere = Atmosphere.new doc[:atmosphere]
+      @image      = Image.new doc[:item][:description]
 
-      @astronomy  = Astronomy.new root.at_xpath 'yweather:astronomy'
-      @location   = Location.new root.at_xpath 'yweather:location'
-      @units      = Units.new root.at_xpath 'yweather:units'
-      @wind       = Wind.new root.at_xpath 'yweather:wind'
-      @atmosphere = Atmosphere.new root.at_xpath 'yweather:atmosphere'
-      @image      = Image.new Nokogiri::XML.parse root.at_css('item description').text
-
-      item = root.at_xpath 'item'
       @forecasts = []
 
-      @condition  = Condition.new item.at_xpath 'yweather:condition'
+      @condition  = Condition.new doc[:item][:condition]
 
-      item.xpath('yweather:forecast').each do |forecast|
+      doc[:item][:forecast].each do |forecast|
         @forecasts << Forecast.new(forecast)
       end
 
-      @latitude    = item.at_xpath('geo:lat').content.to_f
-      @longitude   = item.at_xpath('geo:long').content.to_f
-      @title       = item.at_xpath('title').content
-      @description = item.at_xpath('description').content
+      @latitude    = doc[:item][:lat].to_f
+      @longitude   = doc[:item][:long].to_f
+      @title       = doc[:item][:title]
+      @description = doc[:item][:description]
     end
   end
 end

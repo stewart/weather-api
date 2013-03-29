@@ -19,12 +19,12 @@ module Weather
     attr_reader :code
 
     def initialize payload
-      @day  = payload['day']
-      @date = Utils.parse_time payload['date']
-      @low  = payload['low'].to_i
-      @high = payload['high'].to_i
-      @text = payload['text']
-      @code = payload['code'].to_i
+      @day  = payload[:day]
+      @date = Utils.parse_time payload[:date]
+      @low  = payload[:low].to_i
+      @high = payload[:high].to_i
+      @text = payload[:text]
+      @code = payload[:code].to_i
     end
   end
 end
