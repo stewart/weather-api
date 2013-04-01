@@ -1,7 +1,6 @@
 require 'net/http'
 require 'json'
 require 'map'
-require 'cgi'
 
 require 'weather-api/astronomy'
 require 'weather-api/atmosphere'

@@ -12,14 +12,14 @@ module Weather
     #
     # Returns an int
     def self.minor
-      0
+      1
     end
 
     # The current patch version number
     #
     # Returns an int
     def self.patch
-      1
+      0
     end
 
     # The current pre version number
