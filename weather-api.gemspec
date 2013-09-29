@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "chronic", "~> 0.10.2"
   gem.add_dependency "map", "~> 6.5.1"
+  gem.add_dependency "json", "~> 1.8.0"
   gem.add_development_dependency "rspec", "~> 2.14.1"
   gem.add_development_dependency "webmock", "~> 1.13.0"
   gem.add_development_dependency "rake", "~> 10.1.0"
