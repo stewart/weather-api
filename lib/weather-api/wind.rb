@@ -9,7 +9,7 @@ module Weather
     # the windspeed
     attr_reader :speed
 
-    def initialize payload
+    def initialize(payload)
       @chill = payload[:chill].to_i
       @direction = payload[:direction].to_i
       @speed = payload[:speed].to_i

@@ -3,7 +3,7 @@ module Weather
     # the full URL to the image
     attr_reader :url
 
-    def initialize payload
+    def initialize(payload)
       @url = payload.scan(/src=\"(.*)\"/).flatten.first
     end
   end

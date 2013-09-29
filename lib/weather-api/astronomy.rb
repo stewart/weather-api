@@ -6,7 +6,7 @@ module Weather
     # a Time object containing the sunset time for a location
     attr_reader :sunset
 
-    def initialize payload
+    def initialize(payload)
       @sunrise = Utils.parse_time payload[:sunrise]
       @sunset = Utils.parse_time payload[:sunset]
     end

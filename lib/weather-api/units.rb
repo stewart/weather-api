@@ -19,7 +19,7 @@ module Weather
     # e.g. mph for miles per hour, and kph for kilometers per hour
     attr_reader :speed
 
-    def initialize payload
+    def initialize(payload)
       @temperature = payload[:temperature]
       @distance = payload[:distance]
       @pressure = payload[:pressure]

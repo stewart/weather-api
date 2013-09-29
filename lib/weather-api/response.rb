@@ -52,7 +52,7 @@ module Weather
     # the title of the weather information for the requested location
     attr_reader :title
 
-    def initialize request_location, request_url, doc
+    def initialize(request_location, request_url, doc)
       # save the request params
       @request_location = request_location
       @request_url      = request_url
