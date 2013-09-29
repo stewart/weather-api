@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "weather-api"
   gem.require_paths = ["lib"]
-  gem.version       = Weather::Version.to_s
+  gem.version       = Weather::VERSION
 
   gem.add_dependency "chronic", "~> 0.10.2"
   gem.add_dependency "map", "~> 6.5.1"

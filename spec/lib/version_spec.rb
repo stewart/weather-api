@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Weather::Version do
+describe Weather do
   it "should return a string" do
-    expect(Weather::Version.to_s).to be_a String
+    expect(Weather::VERSION).to be_a String
   end
 end
