@@ -2,11 +2,10 @@ require 'spec_helper'
 
 describe Weather::Astronomy, :vcr do
   let(:response) { Weather.lookup 9848 }
-
-  subject { response.astronomy }
+  let(:astronomy) { response.astronomy }
 
   it 'should contain Time objects for sunrise and sunset' do
-    expect(subject.sunrise).to be_a Time
-    expect(subject.sunset).to be_a Time
+    expect(astronomy.sunrise).to be_a Time
+    expect(astronomy.sunset).to be_a Time
   end
 end

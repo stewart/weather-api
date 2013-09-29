@@ -2,12 +2,11 @@ require 'spec_helper'
 
 describe Weather::Wind, :vcr do
   let(:response) { Weather.lookup 9848 }
-
-  subject { response.wind }
+  let(:wind) { response.wind }
 
   it 'should contain chill, direction, and speed as integers' do
-    expect(subject.chill).to be_a Integer
-    expect(subject.direction).to be_a Integer
-    expect(subject.speed).to be_a Integer
+    expect(wind.chill).to be_a Integer
+    expect(wind.direction).to be_a Integer
+    expect(wind.speed).to be_a Integer
   end
 end
