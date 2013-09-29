@@ -22,7 +22,7 @@ A simple example:
 
     # look up WOEID via http://weather.yahoo.com; enter location by city
     # name or zip and WOEID is at end of resulting page url.
-    response = Weather.lookup(9830)
+    response = Weather.lookup(9830, :celsius)
 
     print <<EOT
     #{response.title}

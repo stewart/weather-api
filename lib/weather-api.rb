@@ -26,13 +26,14 @@ module Weather
     #         a WOEID, refer to Yahoo!'s documentation
     #         at http://developer.yahoo.com/weather/
     #
-    # units - String - whether to retrieve data in Farenheit
-    #         or Celsius. Defaults to Farenheit
+    # system - symbol - which measurement system to use. Defaults to
+    #          farenheit/imperial. Can return celsius/metric if passed :celsius.
     #
     # Returns a Weather::Response object containing forecast
-    def lookup woeid, units = 'f'
-      url = ROOT
-      url += "?q=select%20*%20from%20weather.forecast%20"
+    def lookup(woeid, system = :farenheit)
+      units = (system == :celsius ? 'c' : 'f')
+
+      url = ROOT + "?q=select%20*%20from%20weather.forecast%20"
       url += "where%20woeid%3D#{woeid}%20and%20u%3D'#{units}'&format=json"
 
       doc = get_response url

@@ -19,7 +19,7 @@ describe Weather::Units do
     end
 
     it 'should switch to metric if specified' do
-      response = Weather.lookup 9848, 'c'
+      response = Weather.lookup 9848, :celsius
 
       expect(response.units.distance).to eq 'km'
       expect(response.units.pressure).to eq 'mb'
