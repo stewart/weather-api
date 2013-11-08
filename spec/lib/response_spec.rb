@@ -37,7 +37,7 @@ describe Weather::Response, :vcr do
 
   it 'should contain the WOEID of the request location and the requested URL' do
     expect(response.request_location).to eq 9848
-    expect(response.request_url).to eq "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D9848%20and%20u%3D'f'&format=json"
+    expect(response.request_url).to eq "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D9848%20and%20u%3D'c'&format=json"
   end
 
   it 'should contain a HTML description summarizing weather conditions' do
