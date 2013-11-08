@@ -59,4 +59,64 @@ http_interactions:
         Mar 2013","day":"Sat","high":"57","low":"45","text":"AM Showers"}],"guid":{"isPermaLink":"false","content":"FRXX0073_2013_03_30_7_00_CET"}}}}}}'
     http_version: 
   recorded_at: Fri, 29 Mar 2013 07:15:48 GMT
-recorded_with: VCR 2.4.0
+- request:
+    method: get
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=614274%20and%20u='c'
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - query.yahooapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - engine3.yql.gq1.yahoo.com
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - public, max-age=199
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 08 Nov 2013 19:29:18 GMT
+      Server:
+      - YTS/1.20.13
+      Age:
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":1,"created":"2013-11-08T19:29:18Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
+        Weather - Nice, FR","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html","description":"Yahoo!
+        Weather for Nice, FR","language":"en-us","lastBuildDate":"Fri, 08 Nov 2013
+        7:59 pm CET","ttl":"60","location":{"city":"Nice","country":"France","region":""},"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"wind":{"chill":"17","direction":"320","speed":"8.05"},"atmosphere":{"humidity":"72","pressure":"982.05","rising":"2","visibility":"9.99"},"astronomy":{"sunrise":"7:13
+        am","sunset":"5:13 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Nice, FR at 7:59 pm CET","lat":"43.7","long":"7.25","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html","pubDate":"Fri,
+        08 Nov 2013 7:59 pm CET","condition":{"code":"27","date":"Fri, 08 Nov 2013
+        7:59 pm CET","temp":"17","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/27.gif\"/><br
+        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 17 C<BR />\n<BR /><b>Forecast:</b><BR
+        />\nFri - Showers Early. High: 19 Low: 14<br />\nSat - Sunny/Wind. High: 20
+        Low: 12<br />\nSun - Partly Cloudy/Wind. High: 19 Low: 9<br />\nMon - Sunny.
+        High: 17 Low: 9<br />\nTue - Sunny. High: 19 Low: 11<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html\">Full
+        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"45","date":"8 Nov 2013","day":"Fri","high":"19","low":"14","text":"Showers
+        Early"},{"code":"24","date":"9 Nov 2013","day":"Sat","high":"20","low":"12","text":"Sunny/Wind"},{"code":"24","date":"10
+        Nov 2013","day":"Sun","high":"19","low":"9","text":"Partly Cloudy/Wind"},{"code":"32","date":"11
+        Nov 2013","day":"Mon","high":"17","low":"9","text":"Sunny"},{"code":"32","date":"12
+        Nov 2013","day":"Tue","high":"19","low":"11","text":"Sunny"}],"guid":{"isPermaLink":"false","content":"FRXX0073_2013_11_12_7_00_CET"}}}}}}'
+    http_version: 
+  recorded_at: Fri, 08 Nov 2013 19:29:19 GMT
+recorded_with: VCR 2.6.0
