@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Weather::Response, :vcr do
   let(:response) { Weather.lookup 9848 }
+  let(:invalid_response) { Weather.lookup 8888888888 }
 
   it 'should contain a Weather::Astronomy object' do
     expect(response.astronomy).to be_a Weather::Astronomy
@@ -38,6 +39,10 @@ describe Weather::Response, :vcr do
   it 'should contain the WOEID of the request location and the requested URL' do
     expect(response.request_location).to eq 9848
     expect(response.request_url).to eq "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D9848%20and%20u%3D'c'&format=json"
+  end
+
+  it 'should return a RuntimeError for an invalid WOEID' do
+    expect { invalid_response.location }.to raise_error(RuntimeError, /Failed to get weather/i)
   end
 
   it 'should contain a HTML description summarizing weather conditions' do
