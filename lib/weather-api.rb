@@ -28,14 +28,14 @@ module Weather
     #
     # unit - system of measurement to use. Two acceptable inputs:
     #        'c' - Celsius/Metric measurements
-    #        'f' - Farenheit/Imperial measurements.
+    #        'f' - Fahrenheit/Imperial measurements.
     #
-    #        To make this easier, you can use the Weather::Units::FARENHEIT and
+    #        To make this easier, you can use the Weather::Units::FAHRENHEIT and
     #        Weather::Units::CELSIUS constants. Defaults to Celsius
     #
     # Returns a Weather::Response object containing forecast
     def lookup(woeid, unit = Units::CELSIUS)
-      acceptable_units = [Units::CELSIUS, Units::FARENHEIT]
+      acceptable_units = [Units::CELSIUS, Units::FAHRENHEIT]
       unit = Units::CELSIUS unless acceptable_units.include?(unit)
 
       url = ROOT + "?q=select%20*%20from%20weather.forecast%20"

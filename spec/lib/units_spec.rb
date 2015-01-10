@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Weather::Units do
   describe 'constants' do
-    it 'should have constants for celsius and farenheit' do
-      expect(Weather::Units::FARENHEIT).to eq 'f'
+    it 'should have constants for celsius and fahrenheit' do
+      expect(Weather::Units::FAHRENHEIT).to eq 'f'
       expect(Weather::Units::CELSIUS).to eq 'c'
     end
   end
@@ -19,7 +19,7 @@ describe Weather::Units do
     end
 
     it 'should switch to imperial if specified' do
-      response = Weather.lookup 9848, Weather::Units::FARENHEIT
+      response = Weather.lookup 9848, Weather::Units::FAHRENHEIT
 
       expect(response.units.distance).to eq 'mi'
       expect(response.units.pressure).to eq 'in'

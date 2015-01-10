@@ -1,10 +1,10 @@
 module Weather
   class Units
-    FARENHEIT = 'f'
+    FAHRENHEIT = 'f'
     CELSIUS   = 'c'
 
     # the unit in which temperature is measured
-    # e.g. F for Farenheit, and C for Celsius
+    # e.g. F for Fahrenheit, and C for Celsius
     attr_reader :temperature
 
     # the unit in which distance is measured
