@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "chronic", "~> 0.10.2"
-  spec.add_dependency "map", "~> 6.5.1"
+  spec.add_dependency "map", "~> 6.6.0"
   spec.add_dependency "json"
-  spec.add_development_dependency "rspec", "~> 2.14.1"
-  spec.add_development_dependency "webmock", "~> 1.13.0"
-  spec.add_development_dependency "rake", "~> 10.1.0"
-  spec.add_development_dependency "vcr", "~> 2.6.0"
+  spec.add_development_dependency "rspec", "~> 3.5.0"
+  spec.add_development_dependency "webmock", "~> 2.1.0"
+  spec.add_development_dependency "rake", "~> 11.2.2"
+  spec.add_development_dependency "vcr", "~> 3.0.3"
 end
