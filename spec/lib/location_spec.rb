@@ -30,7 +30,7 @@ describe Weather::Location, :vcr do
     response = Weather.lookup 614274
 
     expect(response.location.city).to eq 'Nice'
-    expect(response.location.region).to eq ''
+    expect(response.location.region).to eq "Provence-Alpes-Cote d'Azur"
     expect(response.location.country).to eq 'France'
   end
 end

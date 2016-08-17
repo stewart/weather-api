@@ -20,10 +20,10 @@ module Weather
     attr_reader :speed
 
     def initialize(payload)
-      @temperature = payload[:temperature]
-      @distance = payload[:distance]
-      @pressure = payload[:pressure]
-      @speed = payload[:speed]
+      @temperature = payload[:temperature].strip
+      @distance = payload[:distance].strip
+      @pressure = payload[:pressure].strip
+      @speed = payload[:speed].strip
     end
   end
 end

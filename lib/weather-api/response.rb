@@ -74,8 +74,8 @@ module Weather
 
       @latitude    = doc[:item][:lat].to_f
       @longitude   = doc[:item][:long].to_f
-      @title       = doc[:item][:title]
-      @description = doc[:item][:description]
+      @title       = doc[:item][:title].strip
+      @description = doc[:item][:description].strip
     end
   end
 end

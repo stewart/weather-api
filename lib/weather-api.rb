@@ -55,7 +55,7 @@ module Weather
 
       response = Map.new(JSON.parse(response))[:query][:results][:channel]
 
-      if response.nil? or response.title.match(/error/i)
+      if response.nil? || !response.respond_to?(:title) || response.title.match(/error/i)
         raise "Failed to get weather [url=#{url}]."
       end
 

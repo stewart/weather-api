@@ -19,7 +19,7 @@ module Weather
     attr_reader :code
 
     def initialize(payload)
-      @day  = payload[:day]
+      @day  = payload[:day].strip
       @date = Utils.parse_time payload[:date]
       @low  = payload[:low].to_i
       @high = payload[:high].to_i

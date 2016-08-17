@@ -16,7 +16,7 @@ module Weather
       @code = payload[:code].to_i
       @date = Utils.parse_time payload[:date]
       @temp = payload[:temp].to_i
-      @text = payload[:text]
+      @text = payload[:text].strip
     end
   end
 end

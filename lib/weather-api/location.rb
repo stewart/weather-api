@@ -10,9 +10,9 @@ module Weather
     attr_reader :region
 
     def initialize(payload)
-      @city = payload[:city]
-      @country = payload[:country]
-      @region = payload[:region]
+      @city = payload[:city].strip
+      @country = payload[:country].strip
+      @region = payload[:region].strip
     end
   end
 end
