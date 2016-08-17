@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=614274%20and%20u='f'
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=614274%20and%20u=%27c%27
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
       Host:
@@ -21,102 +21,57 @@ http_interactions:
       message: OK
     headers:
       X-Yql-Host:
-      - engine10.yql.ne1.yahoo.com
+      - prod_gq1_1;paas.yql;queryyahooapiscomproductiongq1;aae56e8c-5f25-11e6-acf5-f0921c12e67c
+      X-Content-Type-Options:
+      - nosniff
       Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - public, max-age=3599
+      - "*"
       Content-Type:
-      - application/json;charset=utf-8
-      Vary:
-      - Accept-Encoding
-      Date:
-      - Fri, 29 Mar 2013 07:15:47 GMT
-      Server:
-      - YTS/1.20.13
-      Age:
-      - '2'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-03-29T07:15:48Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Nice, FR","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_f.html","description":"Yahoo!
-        Weather for Nice, FR","language":"en-us","lastBuildDate":"Fri, 29 Mar 2013
-        7:29 am CET","ttl":"60","location":{"city":"Nice","country":"France","region":""},"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"wind":{"chill":"47","direction":"340","speed":"8"},"atmosphere":{"humidity":"82","pressure":"29.71","rising":"0","visibility":"6.21"},"astronomy":{"sunrise":"6:18
-        am","sunset":"6:51 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Nice, FR at 7:29 am CET","lat":"43.7","long":"7.28","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_f.html","pubDate":"Fri,
-        29 Mar 2013 7:29 am CET","condition":{"code":"28","date":"Fri, 29 Mar 2013
-        7:29 am CET","temp":"50","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/28.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 50 F<BR />\n<BR /><b>Forecast:</b><BR
-        />\nFri - Cloudy/Wind. High: 64 Low: 49<br />\nSat - AM Showers. High: 57
-        Low: 45<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_f.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"24","date":"29 Mar
-        2013","day":"Fri","high":"64","low":"49","text":"Cloudy/Wind"},{"code":"39","date":"30
-        Mar 2013","day":"Sat","high":"57","low":"45","text":"AM Showers"}],"guid":{"isPermaLink":"false","content":"FRXX0073_2013_03_30_7_00_CET"}}}}}}'
-    http_version: 
-  recorded_at: Fri, 29 Mar 2013 07:15:48 GMT
-- request:
-    method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=614274%20and%20u='c'
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-      Host:
-      - query.yahooapis.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Yql-Host:
-      - engine3.yql.gq1.yahoo.com
-      Access-Control-Allow-Origin:
-      - '*'
+      - application/json; charset=UTF-8
       Cache-Control:
-      - public, max-age=199
-      Content-Type:
-      - application/json;charset=utf-8
+      - no-cache
       Date:
-      - Fri, 08 Nov 2013 19:29:18 GMT
-      Server:
-      - YTS/1.20.13
+      - Wed, 17 Aug 2016 03:25:49 GMT
       Age:
       - '0'
+      Server:
+      - ATS
+      Via:
+      - http/1.1 a12.ue.gq1.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Y-Trace:
+      - BAEAQAAAAAD6HWgWLfRWkgAAAAAAAAAAIC5919ESryQAAAAAAAAAAAAFOjwFkNYRAAU6PAWQ96_yU244AAAAAA--
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-11-08T19:29:18Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Nice, FR","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html","description":"Yahoo!
-        Weather for Nice, FR","language":"en-us","lastBuildDate":"Fri, 08 Nov 2013
-        7:59 pm CET","ttl":"60","location":{"city":"Nice","country":"France","region":""},"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"wind":{"chill":"17","direction":"320","speed":"8.05"},"atmosphere":{"humidity":"72","pressure":"982.05","rising":"2","visibility":"9.99"},"astronomy":{"sunrise":"7:13
-        am","sunset":"5:13 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Nice, FR at 7:59 pm CET","lat":"43.7","long":"7.25","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html","pubDate":"Fri,
-        08 Nov 2013 7:59 pm CET","condition":{"code":"27","date":"Fri, 08 Nov 2013
-        7:59 pm CET","temp":"17","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/27.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 17 C<BR />\n<BR /><b>Forecast:</b><BR
-        />\nFri - Showers Early. High: 19 Low: 14<br />\nSat - Sunny/Wind. High: 20
-        Low: 12<br />\nSun - Partly Cloudy/Wind. High: 19 Low: 9<br />\nMon - Sunny.
-        High: 17 Low: 9<br />\nTue - Sunny. High: 19 Low: 11<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Nice__FR/*http://weather.yahoo.com/forecast/FRXX0073_c.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"45","date":"8 Nov 2013","day":"Fri","high":"19","low":"14","text":"Showers
-        Early"},{"code":"24","date":"9 Nov 2013","day":"Sat","high":"20","low":"12","text":"Sunny/Wind"},{"code":"24","date":"10
-        Nov 2013","day":"Sun","high":"19","low":"9","text":"Partly Cloudy/Wind"},{"code":"32","date":"11
-        Nov 2013","day":"Mon","high":"17","low":"9","text":"Sunny"},{"code":"32","date":"12
-        Nov 2013","day":"Tue","high":"19","low":"11","text":"Sunny"}],"guid":{"isPermaLink":"false","content":"FRXX0073_2013_11_12_7_00_CET"}}}}}}'
+      string: '{"query":{"count":1,"created":"2016-08-17T03:25:49Z","lang":"en-US","results":{"channel":{"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"title":"Yahoo!
+        Weather - Nice, Provence-Alpes-Cote d''Azur, FR","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-614274/","description":"Yahoo!
+        Weather for Nice, Provence-Alpes-Cote d''Azur, FR","language":"en-us","lastBuildDate":"Wed,
+        17 Aug 2016 05:25 AM CEST","ttl":"60","location":{"city":"Nice","country":"France","region":"
+        Provence-Alpes-Cote d''Azur"},"wind":{"chill":"70","direction":"35","speed":"17.70"},"atmosphere":{"humidity":"75","pressure":"33626.85","rising":"0","visibility":"25.91"},"astronomy":{"sunrise":"6:39
+        am","sunset":"8:29 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Nice, Provence-Alpes-Cote d''Azur, FR at 04:00 AM CEST","lat":"43.704441","long":"7.25217","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-614274/","pubDate":"Wed,
+        17 Aug 2016 04:00 AM CEST","condition":{"code":"31","date":"Wed, 17 Aug 2016
+        04:00 AM CEST","temp":"20","text":"Clear"},"forecast":[{"code":"4","date":"17
+        Aug 2016","day":"Wed","high":"26","low":"20","text":"Thunderstorms"},{"code":"47","date":"18
+        Aug 2016","day":"Thu","high":"26","low":"20","text":"Scattered Thunderstorms"},{"code":"30","date":"19
+        Aug 2016","day":"Fri","high":"26","low":"20","text":"Partly Cloudy"},{"code":"30","date":"20
+        Aug 2016","day":"Sat","high":"27","low":"22","text":"Partly Cloudy"},{"code":"34","date":"21
+        Aug 2016","day":"Sun","high":"27","low":"20","text":"Mostly Sunny"},{"code":"32","date":"22
+        Aug 2016","day":"Mon","high":"27","low":"20","text":"Sunny"},{"code":"32","date":"23
+        Aug 2016","day":"Tue","high":"28","low":"21","text":"Sunny"},{"code":"32","date":"24
+        Aug 2016","day":"Wed","high":"28","low":"20","text":"Sunny"},{"code":"32","date":"25
+        Aug 2016","day":"Thu","high":"29","low":"20","text":"Sunny"},{"code":"32","date":"26
+        Aug 2016","day":"Fri","high":"29","low":"21","text":"Sunny"}],"description":"<![CDATA[<img
+        src=\"http://l.yimg.com/a/i/us/we/52/31.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR
+        />Clear\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Wed - Thunderstorms. High:
+        26Low: 20\n<BR /> Thu - Scattered Thunderstorms. High: 26Low: 20\n<BR /> Fri
+        - Partly Cloudy. High: 26Low: 20\n<BR /> Sat - Partly Cloudy. High: 27Low:
+        22\n<BR /> Sun - Mostly Sunny. High: 27Low: 20\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-614274/\">Full
+        Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)\n<BR />\n]]>","guid":{"isPermaLink":"false"}}}}}}'
     http_version: 
-  recorded_at: Fri, 08 Nov 2013 19:29:19 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Wed, 17 Aug 2016 03:25:49 GMT
+recorded_with: VCR 3.0.3

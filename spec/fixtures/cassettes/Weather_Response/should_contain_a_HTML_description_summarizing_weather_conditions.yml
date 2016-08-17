@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=9848%20and%20u='f'
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=9848%20and%20u=%27c%27
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
       Host:
@@ -21,102 +21,53 @@ http_interactions:
       message: OK
     headers:
       X-Yql-Host:
-      - engine6.yql.ne1.yahoo.com
+      - prod_gq1_1;paas.yql;queryyahooapiscomproductiongq1;aae5bbb0-5f25-11e6-acf5-f0921c12e67c
+      X-Content-Type-Options:
+      - nosniff
       Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - public, max-age=3599
+      - "*"
       Content-Type:
-      - application/json;charset=utf-8
-      Vary:
-      - Accept-Encoding
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
       Date:
-      - Fri, 29 Mar 2013 06:50:18 GMT
-      Server:
-      - YTS/1.20.13
+      - Wed, 17 Aug 2016 03:25:50 GMT
       Age:
-      - '1531'
-      Content-Length:
-      - '880'
+      - '0'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-03-29T06:50:19Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Victoria, CA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html","description":"Yahoo!
-        Weather for Victoria, CA","language":"en-us","lastBuildDate":"Thu, 28 Mar
-        2013 8:59 pm PDT","ttl":"60","location":{"city":"Victoria","country":"Canada","region":"BC"},"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"wind":{"chill":"46","direction":"230","speed":"5"},"atmosphere":{"humidity":"82","pressure":"30.11","rising":"1","visibility":""},"astronomy":{"sunrise":"6:59
-        am","sunset":"7:36 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Victoria, CA at 8:59 pm PDT","lat":"48.43","long":"-123.36","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html","pubDate":"Thu,
-        28 Mar 2013 8:59 pm PDT","condition":{"code":"29","date":"Thu, 28 Mar 2013
-        8:59 pm PDT","temp":"48","text":"Partly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/29.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 48 F<BR />\n<BR /><b>Forecast:</b><BR
-        />\nThu - Clear. High: 55 Low: 43<br />\nFri - AM Clouds/PM Sun. High: 55
-        Low: 44<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_f.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"31","date":"28 Mar
-        2013","day":"Thu","high":"55","low":"43","text":"Clear"},{"code":"30","date":"29
-        Mar 2013","day":"Fri","high":"55","low":"44","text":"AM Clouds/PM Sun"}],"guid":{"isPermaLink":"false","content":"CAXX0523_2013_03_29_7_00_PDT"}}}}}}'
+      string: '{"query":{"count":1,"created":"2016-08-17T03:25:50Z","lang":"en-US","results":{"channel":{"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"title":"Yahoo!
+        Weather - Victoria, BC, CA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-9848/","description":"Yahoo!
+        Weather for Victoria, BC, CA","language":"en-us","lastBuildDate":"Tue, 16
+        Aug 2016 08:25 PM PDT","ttl":"60","location":{"city":"Victoria","country":"Canada","region":"
+        BC"},"wind":{"chill":"64","direction":"235","speed":"28.97"},"atmosphere":{"humidity":"72","pressure":"34337.99","rising":"0","visibility":"25.91"},"astronomy":{"sunrise":"6:10
+        am","sunset":"8:24 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Victoria, BC, CA at 07:00 PM PDT","lat":"48.42828","long":"-123.3564","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-9848/","pubDate":"Tue,
+        16 Aug 2016 07:00 PM PDT","condition":{"code":"32","date":"Tue, 16 Aug 2016
+        07:00 PM PDT","temp":"18","text":"Sunny"},"forecast":[{"code":"32","date":"16
+        Aug 2016","day":"Tue","high":"18","low":"16","text":"Sunny"},{"code":"32","date":"17
+        Aug 2016","day":"Wed","high":"18","low":"15","text":"Sunny"},{"code":"32","date":"18
+        Aug 2016","day":"Thu","high":"26","low":"16","text":"Sunny"},{"code":"32","date":"19
+        Aug 2016","day":"Fri","high":"23","low":"19","text":"Sunny"},{"code":"32","date":"20
+        Aug 2016","day":"Sat","high":"22","low":"17","text":"Sunny"},{"code":"32","date":"21
+        Aug 2016","day":"Sun","high":"19","low":"16","text":"Sunny"},{"code":"34","date":"22
+        Aug 2016","day":"Mon","high":"17","low":"15","text":"Mostly Sunny"},{"code":"30","date":"23
+        Aug 2016","day":"Tue","high":"18","low":"16","text":"Partly Cloudy"},{"code":"34","date":"24
+        Aug 2016","day":"Wed","high":"21","low":"16","text":"Mostly Sunny"},{"code":"34","date":"25
+        Aug 2016","day":"Thu","high":"23","low":"18","text":"Mostly Sunny"}],"description":"<![CDATA[<img
+        src=\"http://l.yimg.com/a/i/us/we/52/32.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR
+        />Sunny\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Tue - Sunny. High: 18Low:
+        16\n<BR /> Wed - Sunny. High: 18Low: 15\n<BR /> Thu - Sunny. High: 26Low:
+        16\n<BR /> Fri - Sunny. High: 23Low: 19\n<BR /> Sat - Sunny. High: 22Low:
+        17\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-9848/\">Full
+        Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)\n<BR />\n]]>","guid":{"isPermaLink":"false"}}}}}}'
     http_version: 
-  recorded_at: Fri, 29 Mar 2013 07:15:49 GMT
-- request:
-    method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=9848%20and%20u='c'
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-      Host:
-      - query.yahooapis.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Yql-Host:
-      - engine7.yql.gq1.yahoo.com
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - public, max-age=199
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Fri, 08 Nov 2013 19:29:11 GMT
-      Server:
-      - YTS/1.20.13
-      Age:
-      - '13'
-      Content-Length:
-      - '2345'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-11-08T19:29:12Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Victoria, CA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_c.html","description":"Yahoo!
-        Weather for Victoria, CA","language":"en-us","lastBuildDate":"Fri, 08 Nov
-        2013 11:00 am PST","ttl":"60","location":{"city":"Victoria","country":"Canada","region":"BC"},"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"wind":{"chill":"8","direction":"270","speed":"14.48"},"atmosphere":{"humidity":"66","pressure":"1020.2","rising":"1","visibility":""},"astronomy":{"sunrise":"7:09
-        am","sunset":"4:43 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Victoria, CA at 11:00 am PST","lat":"48.43","long":"-123.36","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_c.html","pubDate":"Fri,
-        08 Nov 2013 11:00 am PST","condition":{"code":"28","date":"Fri, 08 Nov 2013
-        11:00 am PST","temp":"10","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/28.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 10 C<BR />\n<BR /><b>Forecast:</b><BR
-        />\nFri - PM Showers. High: 9 Low: 6<br />\nSat - Showers. High: 8 Low: 6<br
-        />\nSun - AM Showers. High: 8 Low: 6<br />\nMon - Cloudy. High: 9 Low: 7<br
-        />\nTue - Rain. High: 9 Low: 7<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Victoria__CA/*http://weather.yahoo.com/forecast/CAXX0523_c.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"39","date":"8 Nov 2013","day":"Fri","high":"9","low":"6","text":"PM
-        Showers"},{"code":"11","date":"9 Nov 2013","day":"Sat","high":"8","low":"6","text":"Showers"},{"code":"39","date":"10
-        Nov 2013","day":"Sun","high":"8","low":"6","text":"AM Showers"},{"code":"26","date":"11
-        Nov 2013","day":"Mon","high":"9","low":"7","text":"Cloudy"},{"code":"12","date":"12
-        Nov 2013","day":"Tue","high":"9","low":"7","text":"Rain"}],"guid":{"isPermaLink":"false","content":"CAXX0523_2013_11_12_7_00_PST"}}}}}}'
-    http_version: 
-  recorded_at: Fri, 08 Nov 2013 19:29:25 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Wed, 17 Aug 2016 03:25:50 GMT
+recorded_with: VCR 3.0.3

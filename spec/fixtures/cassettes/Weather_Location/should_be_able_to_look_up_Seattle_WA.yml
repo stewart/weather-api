@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=2490383%20and%20u='f'
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=2490383%20and%20u=%27c%27
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
       Host:
@@ -21,102 +21,57 @@ http_interactions:
       message: OK
     headers:
       X-Yql-Host:
-      - engine6.yql.ne1.yahoo.com
+      - prod_gq1_1;paas.yql;queryyahooapiscomproductiongq1;aae52068-5f25-11e6-acf5-f0921c12e67c
+      X-Content-Type-Options:
+      - nosniff
       Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - public, max-age=3600
+      - "*"
       Content-Type:
-      - application/json;charset=utf-8
-      Vary:
-      - Accept-Encoding
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
       Date:
-      - Fri, 29 Mar 2013 07:15:47 GMT
-      Server:
-      - YTS/1.20.13
+      - Wed, 17 Aug 2016 03:25:49 GMT
       Age:
       - '0'
+      Server:
+      - ATS
+      Via:
+      - http/1.1 a05.ue.gq1.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Y-Trace:
+      - BAEAQAAAAAC2PeSy2Vn6iAAAAAAAAAAAAF8crJ4ye_cAAAAAAAAAAAAFOjwFjv90AAU6PAWPKJtK_Ez9AAAAAA--
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-03-29T07:15:47Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Seattle, WA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html","description":"Yahoo!
-        Weather for Seattle, WA","language":"en-us","lastBuildDate":"Thu, 28 Mar 2013
-        10:52 pm PDT","ttl":"60","location":{"city":"Seattle","country":"United States","region":"WA"},"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},"wind":{"chill":"53","direction":"0","speed":"0"},"atmosphere":{"humidity":"74","pressure":"30.14","rising":"1","visibility":"10"},"astronomy":{"sunrise":"6:54
-        am","sunset":"7:32 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Seattle, WA at 10:52 pm PDT","lat":"47.6","long":"-122.33","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html","pubDate":"Thu,
-        28 Mar 2013 10:52 pm PDT","condition":{"code":"27","date":"Thu, 28 Mar 2013
-        10:52 pm PDT","temp":"53","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/27.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 53 F<BR />\n<BR /><b>Forecast:</b><BR
-        />\nThu - Mostly Cloudy. High: 61 Low: 48<br />\nFri - AM Clouds/PM Sun. High:
-        65 Low: 47<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_f.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"27","date":"28 Mar
-        2013","day":"Thu","high":"61","low":"48","text":"Mostly Cloudy"},{"code":"30","date":"29
-        Mar 2013","day":"Fri","high":"65","low":"47","text":"AM Clouds/PM Sun"}],"guid":{"isPermaLink":"false","content":"USWA0395_2013_03_29_7_00_PDT"}}}}}}'
+      string: '{"query":{"count":1,"created":"2016-08-17T03:25:49Z","lang":"en-US","results":{"channel":{"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"title":"Yahoo!
+        Weather - Seattle, WA, US","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2490383/","description":"Yahoo!
+        Weather for Seattle, WA, US","language":"en-us","lastBuildDate":"Tue, 16 Aug
+        2016 08:25 PM PDT","ttl":"60","location":{"city":"Seattle","country":"United
+        States","region":" WA"},"wind":{"chill":"77","direction":"0","speed":"22.53"},"atmosphere":{"humidity":"42","pressure":"34371.86","rising":"0","visibility":"25.91"},"astronomy":{"sunrise":"6:8
+        am","sunset":"8:18 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
+        for Seattle, WA, US at 07:00 PM PDT","lat":"47.603561","long":"-122.329437","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2490383/","pubDate":"Tue,
+        16 Aug 2016 07:00 PM PDT","condition":{"code":"32","date":"Tue, 16 Aug 2016
+        07:00 PM PDT","temp":"25","text":"Sunny"},"forecast":[{"code":"32","date":"16
+        Aug 2016","day":"Tue","high":"25","low":"15","text":"Sunny"},{"code":"32","date":"17
+        Aug 2016","day":"Wed","high":"23","low":"15","text":"Sunny"},{"code":"32","date":"18
+        Aug 2016","day":"Thu","high":"27","low":"17","text":"Sunny"},{"code":"32","date":"19
+        Aug 2016","day":"Fri","high":"28","low":"17","text":"Sunny"},{"code":"32","date":"20
+        Aug 2016","day":"Sat","high":"28","low":"17","text":"Sunny"},{"code":"32","date":"21
+        Aug 2016","day":"Sun","high":"31","low":"17","text":"Sunny"},{"code":"34","date":"22
+        Aug 2016","day":"Mon","high":"23","low":"15","text":"Mostly Sunny"},{"code":"34","date":"23
+        Aug 2016","day":"Tue","high":"23","low":"15","text":"Mostly Sunny"},{"code":"34","date":"24
+        Aug 2016","day":"Wed","high":"23","low":"15","text":"Mostly Sunny"},{"code":"34","date":"25
+        Aug 2016","day":"Thu","high":"24","low":"16","text":"Mostly Sunny"}],"description":"<![CDATA[<img
+        src=\"http://l.yimg.com/a/i/us/we/52/32.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR
+        />Sunny\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Tue - Sunny. High: 25Low:
+        15\n<BR /> Wed - Sunny. High: 23Low: 15\n<BR /> Thu - Sunny. High: 27Low:
+        17\n<BR /> Fri - Sunny. High: 28Low: 17\n<BR /> Sat - Sunny. High: 28Low:
+        17\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2490383/\">Full
+        Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\"
+        >The Weather Channel</a>)\n<BR />\n]]>","guid":{"isPermaLink":"false"}}}}}}'
     http_version: 
-  recorded_at: Fri, 29 Mar 2013 07:15:47 GMT
-- request:
-    method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=2490383%20and%20u='c'
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-      Host:
-      - query.yahooapis.com
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Yql-Host:
-      - engine1.yql.gq1.yahoo.com
-      Access-Control-Allow-Origin:
-      - '*'
-      Cache-Control:
-      - public, max-age=199
-      Content-Type:
-      - application/json;charset=utf-8
-      Date:
-      - Fri, 08 Nov 2013 19:29:18 GMT
-      Server:
-      - YTS/1.20.13
-      Age:
-      - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2013-11-08T19:29:18Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Seattle, WA","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_c.html","description":"Yahoo!
-        Weather for Seattle, WA","language":"en-us","lastBuildDate":"Fri, 08 Nov 2013
-        10:53 am PST","ttl":"60","location":{"city":"Seattle","country":"United States","region":"WA"},"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"},"wind":{"chill":"12","direction":"190","speed":"12.87"},"atmosphere":{"humidity":"66","pressure":"1020.6","rising":"2","visibility":"16.09"},"astronomy":{"sunrise":"7:03
-        am","sunset":"4:41 pm"},"image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com","url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},"item":{"title":"Conditions
-        for Seattle, WA at 10:53 am PST","lat":"47.6","long":"-122.33","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_c.html","pubDate":"Fri,
-        08 Nov 2013 10:53 am PST","condition":{"code":"28","date":"Fri, 08 Nov 2013
-        10:53 am PST","temp":"12","text":"Mostly Cloudy"},"description":"\n<img src=\"http://l.yimg.com/a/i/us/we/52/28.gif\"/><br
-        />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 12 C<BR />\n<BR /><b>Forecast:</b><BR
-        />\nFri - Few Showers. High: 11 Low: 6<br />\nSat - PM Showers. High: 9 Low:
-        7<br />\nSun - Showers. High: 9 Low: 8<br />\nMon - Cloudy. High: 12 Low:
-        8<br />\nTue - Rain. High: 11 Low: 8<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Seattle__WA/*http://weather.yahoo.com/forecast/USWA0395_c.html\">Full
-        Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\"
-        >The Weather Channel</a>)<br/>\n","forecast":[{"code":"11","date":"8 Nov 2013","day":"Fri","high":"11","low":"6","text":"Few
-        Showers"},{"code":"39","date":"9 Nov 2013","day":"Sat","high":"9","low":"7","text":"PM
-        Showers"},{"code":"11","date":"10 Nov 2013","day":"Sun","high":"9","low":"8","text":"Showers"},{"code":"26","date":"11
-        Nov 2013","day":"Mon","high":"12","low":"8","text":"Cloudy"},{"code":"12","date":"12
-        Nov 2013","day":"Tue","high":"11","low":"8","text":"Rain"}],"guid":{"isPermaLink":"false","content":"USWA0395_2013_11_12_7_00_PST"}}}}}}'
-    http_version: 
-  recorded_at: Fri, 08 Nov 2013 19:29:18 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Wed, 17 Aug 2016 03:25:49 GMT
+recorded_with: VCR 3.0.3

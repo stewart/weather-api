@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=8888888888%20and%20u='c'
+    uri: http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20weather.forecast%20where%20woeid=8888888888%20and%20u=%27c%27
     body:
       encoding: US-ASCII
       string: ''
@@ -21,30 +21,32 @@ http_interactions:
       message: OK
     headers:
       X-Yql-Host:
-      - engine7.yql.gq1.yahoo.com
+      - prod_gq1_1;paas.yql;queryyahooapiscomproductiongq1;84bcc71f-5ff1-11e6-acf5-f0921c12e67c
       X-Content-Type-Options:
       - nosniff
       Access-Control-Allow-Origin:
       - "*"
-      Cache-Control:
-      - public, max-age=3599
       Content-Type:
-      - application/json;charset=utf-8
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
       Date:
-      - Sat, 10 Jan 2015 03:24:03 GMT
-      Server:
-      - ATS
+      - Wed, 17 Aug 2016 03:25:50 GMT
       Age:
       - '0'
+      Server:
+      - ATS
+      Via:
+      - http/1.1 a16.ue.gq1.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Y-Trace:
+      - BAEAQAAAAABbiqsDI0B96gAAAAAAAAAAU.wh_ofFiQAAAAAAAAAAAAAFOjwFm2zFAAU6PAWblwFAdRNtAAAAAA--
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"query":{"count":1,"created":"2015-01-10T03:24:03Z","lang":"en-US","results":{"channel":{"title":"Yahoo!
-        Weather - Error","description":"Yahoo! Weather Error","item":{"title":"City
-        not found","description":"\nInvalid Input /forecastrss?u=c&w=8888888888\n"}}}}}'
+      string: '{"query":{"count":1,"created":"2016-08-17T03:25:50Z","lang":"en-US","results":{"channel":{"units":{"distance":"km","pressure":"mb","speed":"km/h","temperature":"C"}}}}}'
     http_version: 
-  recorded_at: Sat, 10 Jan 2015 03:24:03 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Wed, 17 Aug 2016 03:25:50 GMT
+recorded_with: VCR 3.0.3
