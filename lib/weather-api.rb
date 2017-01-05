@@ -45,6 +45,35 @@ module Weather
       Response.new woeid, url, doc
     end
 
+    # Public: Looks up current weather information using a location string
+    #
+    # location - String - A location name.  'City, state, country'
+    #         Examples:  Nome, AK
+    #                    San Francisco, CA, USA
+    #                    Berlin, Germany
+    #                    toronto, ca
+    #
+    # unit - system of measurement to use. Two acceptable inputs:
+    #        'c' - Celsius/Metric measurements
+    #        'f' - Fahrenheit/Imperial measurements.
+    #
+    #        To make this easier, you can use the Weather::Units::FAHRENHEIT and
+    #        Weather::Units::CELSIUS constants. Defaults to Celsius
+    #
+    # Returns a Weather::Response object containing forecast
+    def lookup_by_location(location, unit = Units::CELSIUS)
+      acceptable_units = [Units::CELSIUS, Units::FAHRENHEIT]
+      unit = Units::CELSIUS unless acceptable_units.include?(unit)
+
+      # per the documentation here: https://developer.yahoo.com/weather/
+      # can look up the woeid via geo places api from location
+      url = ROOT + "?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='#{location}') and u='#{unit}'&format=json"
+      url = URI.escape(url)
+
+      doc = get_response url
+      Response.new woeid, url, doc
+    end
+
     private
     def get_response url
       begin
