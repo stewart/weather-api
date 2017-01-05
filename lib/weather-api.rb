@@ -71,7 +71,7 @@ module Weather
       url = URI.escape(url)
 
       doc = get_response url
-      Response.new woeid, url, doc
+      Response.new location, url, doc
     end
 
     private
