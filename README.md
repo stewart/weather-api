@@ -36,6 +36,10 @@ This produces:
      13 degrees
      Cloudy
 
+Lookup via location name
+    
+    response = Weather.lookup_by_location('San Francisco, CA', Weather::Units::FAHRENHEIT)
+    
 ## Copyright
 
 Copyright (c) 2012 Andrew Stewart. See `LICENSE` file for more details.
