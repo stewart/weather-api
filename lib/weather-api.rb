@@ -34,12 +34,12 @@ module Weather
     #        Weather::Units::CELSIUS constants. Defaults to Celsius
     #
     # Returns a Weather::Response object containing forecast
-    def lookup(woeid, unit = Units::CELSIUS)
+    def lookup(city,state, unit = Units::CELSIUS)
       acceptable_units = [Units::CELSIUS, Units::FAHRENHEIT]
       unit = Units::CELSIUS unless acceptable_units.include?(unit)
 
       url = ROOT + "?q=select%20*%20from%20weather.forecast%20"
-      url += "where%20woeid%3D#{woeid}%20and%20u%3D'#{unit}'&format=json"
+      url += "where%20woeid%%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22#{city}%2C%20#{state}%22)%20and%20u%3D'#{unit}'&format=json"
 
       doc = get_response url
       Response.new woeid, url, doc
